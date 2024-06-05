@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnk4b6an0jwiy"]
+
+[ext_resource type="PackedScene" uid="uid://b47givlkrixu1" path="res://scenes/driving_game.tscn" id="1_mt4ap"]
+
+[node name="Scene-Manger" type="Node"]
+
+[node name="Driving-game" parent="." instance=ExtResource("1_mt4ap")]
+position = Vector2(-5, 2)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://4v6xoehh2uq3"]
+
+[ext_resource type="Script" path="res://scripts/pothole.gd" id="1_4tl22"]
+[ext_resource type="Texture2D" uid="uid://bxueh707geiqy" path="res://assets/placeholders/pothole.png" id="1_vurej"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nl2mu"]
+radius = 296.709
+
+[node name="pothole" type="Area2D"]
+script = ExtResource("1_4tl22")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vurej")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, -6)
+shape = SubResource("CircleShape2D_nl2mu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

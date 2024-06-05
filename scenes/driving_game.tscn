@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b47givlkrixu1"]
+
+[ext_resource type="Texture2D" uid="uid://cwtjmpsjeyoa5" path="res://assets/placeholders/top-down -road.png" id="1_46k54"]
+[ext_resource type="PackedScene" uid="uid://cef81sivwitfp" path="res://scenes/nail.tscn" id="2_ggtkw"]
+[ext_resource type="PackedScene" uid="uid://4v6xoehh2uq3" path="res://scenes/pothole.tscn" id="3_fkf8l"]
+[ext_resource type="PackedScene" uid="uid://bkhctkry2okf2" path="res://scenes/top_down_car.tscn" id="4_s3pdb"]
+
+[node name="Driving-game" type="Node2D"]
+
+[node name="road" type="Sprite2D" parent="."]
+position = Vector2(-21, 103)
+scale = Vector2(20, 20)
+texture = ExtResource("1_46k54")
+
+[node name="Nail" parent="." instance=ExtResource("2_ggtkw")]
+position = Vector2(-1349, -606)
+
+[node name="pothole" parent="." instance=ExtResource("3_fkf8l")]
+position = Vector2(1305, 323)
+
+[node name="Top-Down-Car" parent="." instance=ExtResource("4_s3pdb")]
+position = Vector2(389, 941)
+
+[node name="Camera2D" type="Camera2D" parent="Top-Down-Car"]
+position = Vector2(-389, -941)
