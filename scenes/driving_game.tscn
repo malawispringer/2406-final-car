@@ -8,7 +8,7 @@
 [node name="Driving-game" type="Node2D"]
 
 [node name="road" type="Sprite2D" parent="."]
-position = Vector2(-21, 103)
+position = Vector2(-37, -209)
 scale = Vector2(20, 20)
 texture = ExtResource("1_46k54")
 
@@ -22,4 +22,5 @@ position = Vector2(1305, 323)
 position = Vector2(389, 941)
 
 [node name="Camera2D" type="Camera2D" parent="Top-Down-Car"]
-position = Vector2(-389, -941)
+position = Vector2(18, -59)
+zoom = Vector2(0.25, 0.25)
