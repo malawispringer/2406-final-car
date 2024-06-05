@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name TDCar
 
-const SPEED = 300.0
+const SPEED = 400.0
 #const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -10,10 +10,16 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
 	
+	# use the gravity math to move upwards
 	# Add the gravity.
 	#if not is_on_floor():
 	#	velocity.y += gravity * delta
-
+	
+	if Input.is_action_just_released("click"):
+		position.x -= 850
+	
+	if Input.is_action_just_pressed("right-click"):
+		position.x += 850
 	# Handle jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 	#	velocity.y = JUMP_VELOCITY

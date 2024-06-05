@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcfxcq4gt86v"]
+
+[ext_resource type="Texture2D" uid="uid://6t5mjlasbf1x" path="res://assets/placeholders/inventory-bar.png" id="1_esk5n"]
+[ext_resource type="Script" path="res://scripts/inventory.gd" id="1_rnk77"]
+[ext_resource type="Texture2D" uid="uid://bad1lxb1ee0yc" path="res://assets/placeholders/car-jack-smaller.png" id="2_hk0d8"]
+[ext_resource type="Texture2D" uid="uid://kklkt2852b2g" path="res://assets/placeholders/nail.png" id="4_ts4iw"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchor_right = 0.163
+anchor_bottom = 1.0
+offset_right = 0.223999
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rnk77")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_esk5n")
+
+[node name="GridContainer" type="GridContainer" parent="TextureRect"]
+layout_direction = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 30.0
+offset_right = 76.0
+offset_bottom = 360.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 14
+
+[node name="slot_1" type="TextureRect" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("2_hk0d8")
+expand_mode = 1
+
+[node name="slot_2" type="TextureRect" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+expand_mode = 1
+
+[node name="slot_3" type="TextureRect" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+expand_mode = 1
+
+[node name="slot_4" type="TextureRect" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+expand_mode = 1
+
+[node name="slot_5" type="TextureRect" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture = ExtResource("4_ts4iw")
+expand_mode = 1
