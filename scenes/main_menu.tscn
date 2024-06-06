@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhlk0ojhg1xa4"]
+[gd_scene load_steps=6 format=3 uid="uid://cgoe6w31ejkyd"]
 
 [ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/yaybackground.jpg" id="1_fe0to"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_hs4w7"]
@@ -84,7 +84,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Start"
+text = "QUIT"
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/VBoxContainer2/QUIT"]
 texture_filter = 1
@@ -104,3 +104,4 @@ expand_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/QUIT" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer2/QUIT" to="." method="_on_quit_pressed"]
