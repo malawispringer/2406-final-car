@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uyq1dy3lw6dn"
-path="res://.godot/imported/Red_Buttons_Pixel.png-18a89e148756a6625527a1c43002e018.ctex"
+uid="uid://grw5jukxyuaf"
+path="res://.godot/imported/blankbackground.jpg-1f151bd1b9e8a4b8e3fb8c2f129d9fbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/OurAssets/Red_Buttons_Pixel.png"
-dest_files=["res://.godot/imported/Red_Buttons_Pixel.png-18a89e148756a6625527a1c43002e018.ctex"]
+source_file="res://assets/OurAssets/Backgrounds/blankbackground.jpg"
+dest_files=["res://.godot/imported/blankbackground.jpg-1f151bd1b9e8a4b8e3fb8c2f129d9fbe.ctex"]
 
 [params]
 
