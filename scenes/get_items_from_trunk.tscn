@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bvj86nb3tnlif" path="res://scenes/car_jack.tscn" id="5_f3ryj"]
 
 [node name="get-items-from-trunk" type="Sprite2D"]
-position = Vector2(301, 180)
+position = Vector2(285, 180)
+scale = Vector2(1.05333, 1)
 texture = ExtResource("1_y80a3")
 
 [node name="Car-Trunk" parent="." instance=ExtResource("2_rk00g")]
@@ -23,4 +24,7 @@ offset_right = 212.224
 offset_bottom = -180.0
 
 [node name="car-jack" parent="." instance=ExtResource("5_f3ryj")]
-position = Vector2(-27, 52)
+offset_top = 52.0
+offset_bottom = 108.0
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -12,5 +12,10 @@ func _process(delta):
 	pass
 
 func _get_drag_data(at_position):
+	var dragPreview = self.duplicate()	
+	dragPreview.custom_minimum_size = Vector2(60,60)
+	set_drag_preview(dragPreview)
+	#self.visible = false	
 	print("targetcontainer getting drag_data has run")
 	return self
+	
