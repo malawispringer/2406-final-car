@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Final-Car"
-run/main_scene="res://scenes/watch_flat_tire.tscn"
+run/main_scene="res://scenes/get_items_from_trunk.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

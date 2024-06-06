@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1yds47860tl3"]
+[gd_scene load_steps=8 format=3 uid="uid://b1yds47860tl3"]
 
 [ext_resource type="Texture2D" uid="uid://c7ebfyaqgvi8r" path="res://assets/placeholders/random-grass.jpg" id="1_y80a3"]
 [ext_resource type="PackedScene" uid="uid://bs4qnudobgw3l" path="res://scenes/car_trunk.tscn" id="2_rk00g"]
 [ext_resource type="Texture2D" uid="uid://bmrr6djlusfg2" path="res://assets/placeholders/car-trunk.jpg" id="3_nknnt"]
 [ext_resource type="PackedScene" uid="uid://bcfxcq4gt86v" path="res://scenes/inventory.tscn" id="3_x6xly"]
 [ext_resource type="PackedScene" uid="uid://bvj86nb3tnlif" path="res://scenes/car_jack.tscn" id="5_f3ryj"]
+[ext_resource type="PackedScene" uid="uid://elvidu2iyci" path="res://scenes/slot_object.tscn" id="6_6g2k3"]
+[ext_resource type="PackedScene" uid="uid://cop2u1axy6hry" path="res://scenes/inventory - Copy.tscn" id="7_dwgl6"]
 
 [node name="get-items-from-trunk" type="Sprite2D"]
 position = Vector2(583, 321)
@@ -18,11 +20,23 @@ region_enabled = true
 region_rect = Rect2(43, 123, 272, 196.906)
 
 [node name="Inventory" parent="." instance=ExtResource("3_x6xly")]
-offset_left = 212.0
-offset_top = -180.0
-offset_right = 212.224
-offset_bottom = -180.0
+offset_left = 406.994
+offset_top = -162.385
+offset_right = 407.218
+offset_bottom = -162.385
 
 [node name="car-jack" parent="." instance=ExtResource("5_f3ryj")]
 offset_top = 52.0
 offset_bottom = 108.0
+
+[node name="slot_object" parent="." instance=ExtResource("6_6g2k3")]
+offset_left = -291.0
+offset_top = 88.0
+offset_right = -807.0
+offset_bottom = -191.0
+
+[node name="Inventory2" parent="." instance=ExtResource("7_dwgl6")]
+offset_left = 206.644
+offset_top = -176.697
+offset_right = 206.868
+offset_bottom = -176.697
