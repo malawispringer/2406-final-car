@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvj86nb3tnlif"]
+[gd_scene load_steps=3 format=3 uid="uid://dh427xt5tki1n"]
 
 [ext_resource type="Texture2D" uid="uid://bad1lxb1ee0yc" path="res://assets/placeholders/car-jack-smaller.png" id="1_xpruf"]
 [ext_resource type="Script" path="res://scenes/car_jack.gd" id="2_bayhk"]
