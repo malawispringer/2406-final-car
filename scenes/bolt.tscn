@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyao3hemrpb4v"]
+
+[ext_resource type="SpriteFrames" uid="uid://diap731726boe" path="res://assets/bolt_sprite_frames.tres" id="1_a2xt3"]
+
+[node name="Bolt" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_a2xt3")
+frame_progress = 0.491108
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,0 +1,76 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://d131lcvcm31yr"]
+
+[ext_resource type="Texture2D" uid="uid://b4m1a3hr5l0eg" path="res://assets/OurAssets/tire/tire-spritesheet.png" id="1_lkm6c"]
+[ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="2_5wgtx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1ewb"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(747, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bws1e"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(498, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kkaw"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(249, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g2yo"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(0, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aokvd"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(747, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l7l5"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(498, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frrmx"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(249, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsobe"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(0, 0, 249, 250)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1ewb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bws1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kkaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0g2yo")
+}, {
+"duration": 5.0,
+"texture": ExtResource("2_5wgtx")
+}],
+"loop": true,
+"name": &"going flat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aokvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l7l5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frrmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsobe")
+}],
+"loop": true,
+"name": &"rolling",
+"speed": 5.0
+}]
