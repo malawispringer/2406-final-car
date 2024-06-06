@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgoe6w31ejkyd"]
+[gd_scene load_steps=6 format=3 uid="uid://cgoe6w31ejkyd"]
 
 [ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/yaybackground.jpg" id="1_fe0to"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_hs4w7"]
+[ext_resource type="FontFile" uid="uid://bu8cwcjrxj1cb" path="res://assets/OurAssets/MiniSerif.ttf" id="3_f0ema"]
+[ext_resource type="Texture2D" uid="uid://uyq1dy3lw6dn" path="res://assets/OurAssets/Red_Buttons_Pixel.png" id="4_y27h1"]
+[ext_resource type="Texture2D" uid="uid://b4nj1p2ff7tlp" path="res://assets/OurAssets/better.png" id="5_g8llt"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -24,13 +27,13 @@ texture = ExtResource("1_fe0to")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
-offset_left = 399.0
-offset_top = 122.0
-offset_right = 772.0
-offset_bottom = 374.0
+offset_left = 291.0
+offset_top = 66.0
+offset_right = 894.0
+offset_bottom = 340.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 55
+theme_override_constants/separation = 74
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -39,7 +42,11 @@ size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.486275, 0.184314, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("3_f0ema")
 theme_override_font_sizes/font_size = 72
 text = "Game Title"
 
@@ -48,16 +55,51 @@ text = "Game Title"
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
-theme_override_constants/separation = 36
+theme_override_constants/separation = 66
 
 [node name="Start Button" type="Button" parent="VBoxContainer/VBoxContainer2"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "Start"
 
-[node name="Quit Button" type="Button" parent="VBoxContainer/VBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/VBoxContainer2/Start Button"]
+texture_filter = 1
+custom_minimum_size = Vector2(29, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_top = -22.0
+offset_right = 42.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_y27h1")
+expand_mode = 1
+
+[node name="QUIT" type="Button" parent="VBoxContainer/VBoxContainer2"]
 layout_mode = 2
-text = "Quit
-"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Start"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/VBoxContainer2/QUIT"]
+texture_filter = 1
+custom_minimum_size = Vector2(29, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -30.0
+offset_right = 43.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_g8llt")
+expand_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/Start Button" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer2/Quit Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer2/QUIT" to="." method="_on_start_button_pressed"]
