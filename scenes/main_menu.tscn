@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhlk0ojhg1xa4"]
+[gd_scene load_steps=6 format=3 uid="uid://cgoe6w31ejkyd"]
 
 [ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/yaybackground.jpg" id="1_fe0to"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_hs4w7"]
