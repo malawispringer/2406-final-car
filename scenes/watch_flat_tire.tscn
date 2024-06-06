@@ -1,15 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://bn0d24xruu874"]
 
 [ext_resource type="Texture2D" uid="uid://c7ebfyaqgvi8r" path="res://assets/placeholders/random-grass.jpg" id="1_t53di"]
-[ext_resource type="Script" path="res://scenes/Button.gd" id="2_hoegt"]
+[ext_resource type="PackedScene" uid="uid://k5e2fgvd1n6h" path="res://scenes/wheel.tscn" id="2_v6hda"]
 
 [node name="watch-flat-tire" type="Node2D"]
 
 [node name="bkgd" type="Sprite2D" parent="."]
 texture = ExtResource("1_t53di")
 
-[node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "next"
-script = ExtResource("2_hoegt")
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_v6hda")]
+position = Vector2(76, 64)

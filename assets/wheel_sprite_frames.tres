@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://d131lcvcm31yr"]
+
+[ext_resource type="Texture2D" uid="uid://b4m1a3hr5l0eg" path="res://assets/OurAssets/tire/tire-spritesheet.png" id="1_lkm6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fasjd"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(0, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1asug"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(249, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h31p0"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(498, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t51p"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(747, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okojy"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(0, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0nop"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(249, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o338r"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(498, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7f1u"]
+atlas = ExtResource("1_lkm6c")
+region = Rect2(747, 0, 249, 250)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fasjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1asug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h31p0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t51p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okojy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0nop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o338r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7f1u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

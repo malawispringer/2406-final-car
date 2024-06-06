@@ -103,5 +103,5 @@ texture = ExtResource("5_g8llt")
 expand_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/Start Button" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer2/QUIT" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/QUIT" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer2/QUIT" to="." method="_on_start_button_pressed"]

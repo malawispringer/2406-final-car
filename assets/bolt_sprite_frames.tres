@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://diap731726boe"]
+
+[ext_resource type="Texture2D" uid="uid://co0tg6d1c5bhj" path="res://assets/OurAssets/bolt/bolt-spritesheet.png" id="1_vrtdm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd777"]
+atlas = ExtResource("1_vrtdm")
+region = Rect2(0, 0, 468, 528)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8ce2"]
+atlas = ExtResource("1_vrtdm")
+region = Rect2(468, 0, 468, 528)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymwfa"]
+atlas = ExtResource("1_vrtdm")
+region = Rect2(936, 0, 468, 528)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37raw"]
+atlas = ExtResource("1_vrtdm")
+region = Rect2(1404, 0, 468, 528)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6fnx"]
+atlas = ExtResource("1_vrtdm")
+region = Rect2(1872, 0, 468, 528)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuc1x"]
+atlas = ExtResource("1_vrtdm")
+region = Rect2(2340, 0, 468, 528)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3w61"]
+atlas = ExtResource("1_vrtdm")
+region = Rect2(2808, 0, 468, 528)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l711i"]
+atlas = ExtResource("1_vrtdm")
+region = Rect2(3276, 0, 468, 528)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd777")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8ce2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymwfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37raw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6fnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuc1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3w61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l711i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
