@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/yaybackground.jpg" id="1_fe0to"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_hs4w7"]
-[ext_resource type="FontFile" uid="uid://bu8cwcjrxj1cb" path="res://assets/OurAssets/MiniSerif.ttf" id="3_f0ema"]
+[ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="3_yy3es"]
 [ext_resource type="Texture2D" uid="uid://uyq1dy3lw6dn" path="res://assets/OurAssets/Red_Buttons_Pixel.png" id="4_y27h1"]
 [ext_resource type="Texture2D" uid="uid://b4nj1p2ff7tlp" path="res://assets/OurAssets/better.png" id="5_g8llt"]
 
@@ -46,9 +46,10 @@ theme_override_colors/font_color = Color(0, 0.486275, 0.184314, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = -4
 theme_override_constants/shadow_offset_y = 5
-theme_override_fonts/font = ExtResource("3_f0ema")
-theme_override_font_sizes/font_size = 72
-text = "Game Title"
+theme_override_fonts/font = ExtResource("3_yy3es")
+theme_override_font_sizes/font_size = 71
+text = "GAME TITLE"
+horizontal_alignment = 1
 
 [node name="Node" type="Node" parent="VBoxContainer"]
 
