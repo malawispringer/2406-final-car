@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwdm3ct8ofa0n"]
+[gd_scene load_steps=8 format=3 uid="uid://bwdm3ct8ofa0n"]
 
 [ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="1_p7wm0"]
+[ext_resource type="Script" path="res://scripts/loosening_bolts.gd" id="1_rb6cx"]
 [ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="2_gmdjd"]
 [ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="3_vcqp3"]
 [ext_resource type="PackedScene" path="res://scenes/inventory - Copy.tscn" id="5_55jte"]
 [ext_resource type="Texture2D" uid="uid://cajr0rhpybm7o" path="res://assets/OurAssets/bolt/bolt pic-modified.png" id="5_d2vt3"]
+[ext_resource type="PackedScene" path="res://scenes/slot_object.tscn" id="7_xiquw"]
 
 [node name="LooseningBolts" type="Node2D"]
+script = ExtResource("1_rb6cx")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -17.0
@@ -29,8 +32,8 @@ scale = Vector2(1.26239, 1.18671)
 texture = ExtResource("3_vcqp3")
 
 [node name="Inventory" parent="." instance=ExtResource("5_55jte")]
-offset_left = 1060.0
-offset_right = 1078.0
+offset_left = 967.0
+offset_right = 985.0
 offset_bottom = 6.0
 
 [node name="Bolts" type="Node" parent="."]
@@ -54,3 +57,9 @@ texture = ExtResource("5_d2vt3")
 position = Vector2(492, 409)
 scale = Vector2(0.0332043, 0.0311474)
 texture = ExtResource("5_d2vt3")
+
+[node name="slot_object" parent="." instance=ExtResource("7_xiquw")]
+offset_left = 453.0
+offset_top = 372.0
+offset_right = 508.0
+offset_bottom = 427.0
