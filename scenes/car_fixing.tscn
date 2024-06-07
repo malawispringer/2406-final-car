@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="1_ia6wh"]
 [ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="2_lwsd0"]
-[ext_resource type="PackedScene" uid="uid://bcfxcq4gt86v" path="res://scenes/inventory.tscn" id="3_7f2uw"]
+[ext_resource type="PackedScene" uid="uid://cop2u1axy6hry" path="res://scenes/inventory - Copy.tscn" id="3_wxuc1"]
 
 [node name="Car Fixing" type="Node2D"]
 
@@ -16,11 +16,8 @@ position = Vector2(-145, 47)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lwsd0")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.8, 1.8)
-
-[node name="Inventory" parent="." instance=ExtResource("3_7f2uw")]
-offset_left = 230.0
-offset_top = -181.0
-offset_right = 230.224
-offset_bottom = -181.0
+[node name="Inventory2" parent="." instance=ExtResource("3_wxuc1")]
+offset_left = 962.0
+offset_top = -2.0
+offset_right = 962.0
+offset_bottom = -2.0

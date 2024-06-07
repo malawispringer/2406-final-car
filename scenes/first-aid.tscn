@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfjujd20xerji"]
+
+[ext_resource type="Texture2D" uid="uid://cjgv1nvsfj4ce" path="res://assets/OurAssets/first aid.png" id="1_35put"]
+[ext_resource type="Script" path="res://scripts/car_jack.gd" id="2_bayhk"]
+
+[node name="first-aid" type="TextureRect"]
+offset_left = -27.0
+offset_top = -26.0
+offset_right = 29.0
+offset_bottom = 30.0
+texture = ExtResource("1_35put")
+script = ExtResource("2_bayhk")

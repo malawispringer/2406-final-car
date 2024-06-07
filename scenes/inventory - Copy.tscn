@@ -15,19 +15,25 @@ script = ExtResource("1_rnk77")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 185.0
+offset_bottom = 640.0
 texture = ExtResource("1_esk5n")
 
 [node name="GridContainer" type="GridContainer" parent="TextureRect"]
 layout_direction = 1
-layout_mode = 0
-offset_left = 14.0
-offset_top = 30.0
-offset_right = 76.0
-offset_bottom = 360.0
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 14
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -266.0
+offset_right = 48.5
+offset_bottom = 377.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/v_separation = 26
 
 [node name="slot_object" parent="TextureRect/GridContainer" instance=ExtResource("3_h1t0s")]
 layout_mode = 2
@@ -43,3 +49,11 @@ layout_mode = 2
 
 [node name="slot_object5" parent="TextureRect/GridContainer" instance=ExtResource("3_h1t0s")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 81.0
+offset_bottom = 24.0
+text = "inventory"
