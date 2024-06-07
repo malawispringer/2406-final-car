@@ -1,10 +1,11 @@
 extends Control
 
+
 @onready var main_container = $TextureRect/GridContainer
 
 func _ready() -> void:
 	pass 
-
+# Once object has been clicked
 func _get_drag_data(at_position):
 	var dragSlotNode = _get_slot_node_at_position(at_position)
 	#if dragSlotNode.texture == null: return
@@ -15,8 +16,10 @@ func _get_drag_data(at_position):
 	print("targetcontainer getting drag_data has run")
 	return dragSlotNode
 	
+# Only allows for the object to be dropped in a particular area
 func _can_drop_data(at_position, data):
 	var targetSlotNode = _get_slot_node_at_position(at_position)
+	# Checks if object is draggable
 	var can_drop: bool = data is Node and data.is_in_group("DRAGGERS")
 	print("we can dropp")
 	return targetSlotNode != null or can_drop
