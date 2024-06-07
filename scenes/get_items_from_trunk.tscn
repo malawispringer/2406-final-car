@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1yds47860tl3"]
+[gd_scene load_steps=9 format=3 uid="uid://b1yds47860tl3"]
 
-[ext_resource type="Texture2D" uid="uid://c7ebfyaqgvi8r" path="res://assets/placeholders/random-grass.jpg" id="1_y80a3"]
+[ext_resource type="Texture2D" uid="uid://grw5jukxyuaf" path="res://assets/OurAssets/Backgrounds/blankbackground.jpg" id="1_dm0tg"]
+[ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="2_ppctj"]
 [ext_resource type="PackedScene" path="res://scenes/car_trunk.tscn" id="2_rk00g"]
-[ext_resource type="Texture2D" uid="uid://bmrr6djlusfg2" path="res://assets/placeholders/car-trunk.jpg" id="3_nknnt"]
+[ext_resource type="Texture2D" uid="uid://dgds8l1jru3b3" path="res://assets/OurAssets/Car Views/TRUNK-modified.png" id="3_pdnht"]
 [ext_resource type="PackedScene" path="res://scenes/inventory.tscn" id="3_x6xly"]
 [ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/car_jack.tscn" id="5_f3ryj"]
 [ext_resource type="PackedScene" path="res://scenes/slot_object.tscn" id="6_6g2k3"]
@@ -11,11 +12,19 @@
 [node name="get-items-from-trunk" type="Sprite2D"]
 position = Vector2(583, 321)
 scale = Vector2(1.90666, 1.81667)
-texture = ExtResource("1_y80a3")
+texture = ExtResource("1_dm0tg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -298.0
+offset_top = -662.0
+offset_right = 1285.0
+offset_bottom = 365.0
+texture = ExtResource("2_ppctj")
 
 [node name="Car-Trunk" parent="." instance=ExtResource("2_rk00g")]
 position = Vector2(-14, 1)
-texture = ExtResource("3_nknnt")
+texture = ExtResource("3_pdnht")
 region_enabled = true
 region_rect = Rect2(43, 123, 272, 196.906)
 
