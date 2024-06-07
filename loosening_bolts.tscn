@@ -37,6 +37,7 @@ texture = ExtResource("2_gmdjd")
 position = Vector2(456.5, 370.5)
 scale = Vector2(1.26239, 1.18671)
 texture = ExtResource("3_vcqp3")
+metadata/_edit_lock_ = true
 
 [node name="Inventory" parent="." instance=ExtResource("5_55jte")]
 offset_left = 967.0
@@ -81,6 +82,7 @@ theme_override_fonts/font = ExtResource("8_uidhx")
 theme_override_font_sizes/font_size = 26
 text = "USE THE WRENCH TO LOOSEN THE BOLTS ON OUR FLAT TIRE"
 autowrap_mode = 2
+metadata/_edit_lock_ = true
 
 [node name="Wreeeench-modified" type="Sprite2D" parent="."]
 position = Vector2(1058, 106)

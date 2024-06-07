@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl62g1h2s0xum"]
+[gd_scene load_steps=9 format=3 uid="uid://dl62g1h2s0xum"]
 
 [ext_resource type="Texture2D" uid="uid://ditoaw7dbv3xv" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="1_tbmvw"]
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_be1cv"]
+[ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="3_5qlfk"]
+[ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="4_5oxnm"]
+[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/car_jack.tscn" id="5_ermyd"]
+[ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="6_begvn"]
+[ext_resource type="Texture2D" uid="uid://382iqc6bl1y" path="res://assets/OurAssets/tire/Tire-modified.png" id="7_k6h4y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1yr"]
+size = Vector2(127, 173)
 
 [node name="CarJacking" type="Node2D"]
 
@@ -17,4 +25,39 @@ metadata/_edit_lock_ = true
 offset_left = 967.0
 offset_right = 985.0
 offset_bottom = 6.0
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D"]
+position = Vector2(227, 406)
+shape = SubResource("RectangleShape2D_1x1yr")
+
+[node name="TextureRect" type="TextureRect" parent="Node2D"]
+offset_left = -5.0
+offset_right = 844.0
+offset_bottom = 556.0
+texture = ExtResource("3_5qlfk")
+metadata/_edit_lock_ = true
+
+[node name="FlatTire" type="Sprite2D" parent="."]
+position = Vector2(456.5, 370.5)
+scale = Vector2(1.26239, 1.18671)
+texture = ExtResource("4_5oxnm")
+metadata/_edit_lock_ = true
+
+[node name="car-jack" parent="." instance=ExtResource("5_ermyd")]
+offset_left = 973.0
+offset_top = 180.0
+offset_right = 1133.0
+offset_bottom = 272.0
+texture = ExtResource("6_begvn")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Tire-modified" type="Sprite2D" parent="."]
+position = Vector2(1068, 339)
+scale = Vector2(0.443038, 0.424198)
+texture = ExtResource("7_k6h4y")
 metadata/_edit_lock_ = true
