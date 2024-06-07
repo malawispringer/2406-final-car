@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://b1yds47860tl3"]
 
 [ext_resource type="Texture2D" uid="uid://c7ebfyaqgvi8r" path="res://assets/placeholders/random-grass.jpg" id="1_y80a3"]
-[ext_resource type="PackedScene" uid="uid://bs4qnudobgw3l" path="res://scenes/car_trunk.tscn" id="2_rk00g"]
+[ext_resource type="PackedScene" path="res://scenes/car_trunk.tscn" id="2_rk00g"]
 [ext_resource type="Texture2D" uid="uid://bmrr6djlusfg2" path="res://assets/placeholders/car-trunk.jpg" id="3_nknnt"]
-[ext_resource type="PackedScene" uid="uid://bcfxcq4gt86v" path="res://scenes/inventory.tscn" id="3_x6xly"]
-[ext_resource type="PackedScene" uid="uid://bvj86nb3tnlif" path="res://scenes/car_jack.tscn" id="5_f3ryj"]
-[ext_resource type="PackedScene" uid="uid://elvidu2iyci" path="res://scenes/slot_object.tscn" id="6_6g2k3"]
-[ext_resource type="PackedScene" uid="uid://cop2u1axy6hry" path="res://scenes/inventory - Copy.tscn" id="7_dwgl6"]
+[ext_resource type="PackedScene" path="res://scenes/inventory.tscn" id="3_x6xly"]
+[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/car_jack.tscn" id="5_f3ryj"]
+[ext_resource type="PackedScene" path="res://scenes/slot_object.tscn" id="6_6g2k3"]
+[ext_resource type="PackedScene" path="res://scenes/inventory - Copy.tscn" id="7_dwgl6"]
 
 [node name="get-items-from-trunk" type="Sprite2D"]
 position = Vector2(583, 321)
