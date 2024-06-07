@@ -5,7 +5,8 @@ extends Sprite2D
 func _ready():
 	move_car()
 	#go_flat()
-	
+	get_tree().change_scene_to_file("res://scenes/scence-change.tscn") 	
+
 	pass # Replace with function body.
 
 

@@ -7,7 +7,7 @@ func _ready() -> void:
 	pass 
 # Once object has been clicked
 func _get_drag_data(at_position):
-	var dragSlotNode = _get_slot_node_at_position(at_position)
+	var dragSlotNode = _get_slot_node_at_position(at_position).get_child
 	#if dragSlotNode.texture == null: return
 	#print (dragSlotNode)
 	var dragPreviewNode = dragSlotNode.duplicate()

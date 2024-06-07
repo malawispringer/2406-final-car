@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8n5f5r8s8mhk"]
+
+[ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="1_uv2co"]
+[ext_resource type="Script" path="res://scripts/panel-click.gd" id="2_l5vag"]
+
+[node name="scene-change" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(578.25, 322.75)
+scale = Vector2(1.29528, 1.21869)
+texture = ExtResource("1_uv2co")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 40.0
+offset_top = 43.0
+offset_right = 1099.0
+offset_bottom = 589.0
+script = ExtResource("2_l5vag")

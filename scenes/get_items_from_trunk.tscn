@@ -3,10 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="2_ppctj"]
 [ext_resource type="Texture2D" uid="uid://dgds8l1jru3b3" path="res://assets/OurAssets/Car Views/TRUNK-modified.png" id="3_pdnht"]
 [ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="5_86wbe"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/car_jack.tscn" id="5_f3ryj"]
 [ext_resource type="PackedScene" uid="uid://b82kj05aojs2c" path="res://scenes/slot_object.tscn" id="6_6g2k3"]
 [ext_resource type="PackedScene" path="res://scenes/inventory - Copy.tscn" id="7_dwgl6"]
 [ext_resource type="PackedScene" path="res://scenes/first-aid.tscn" id="8_4bptg"]
+=======
+[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/wrench.tscn" id="5_f3ryj"]
+[ext_resource type="PackedScene" uid="uid://elvidu2iyci" path="res://scenes/slot_object.tscn" id="6_6g2k3"]
+[ext_resource type="PackedScene" uid="uid://cop2u1axy6hry" path="res://scenes/inventory - Copy.tscn" id="7_dwgl6"]
+[ext_resource type="PackedScene" uid="uid://bfjujd20xerji" path="res://scenes/first-aid.tscn" id="8_4bptg"]
+>>>>>>> Stashed changes
 
 [node name="get-items-from-trunk" type="Node2D"]
 

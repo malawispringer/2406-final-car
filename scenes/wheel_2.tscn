@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn8riy2ciceht"]
+
+[ext_resource type="SpriteFrames" uid="uid://ukbc5q3m8ws5" path="res://assets/wheel2_sprite_frames.tres" id="1_jxvoo"]
+[ext_resource type="Script" path="res://scripts/wheel.gd" id="2_8blp4"]
+
+[node name="wheel2" type="AnimatedSprite2D"]
+position = Vector2(136, 103)
+sprite_frames = ExtResource("1_jxvoo")
+animation = &"going_flat"
+autoplay = "rolling"
+script = ExtResource("2_8blp4")

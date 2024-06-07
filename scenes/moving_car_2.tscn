@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://f8hrg3umc0p3"]
+
+[ext_resource type="Texture2D" uid="uid://c2gqstwqyncgd" path="res://assets/OurAssets/Car Views/carwithoutwheels.png" id="1_nhkcf"]
+[ext_resource type="Script" path="res://scripts/moving_car.gd" id="2_nabju"]
+[ext_resource type="PackedScene" uid="uid://dn8riy2ciceht" path="res://scenes/wheel_2.tscn" id="2_rpv47"]
+
+[node name="moving-car2" type="Sprite2D"]
+texture = ExtResource("1_nhkcf")
+script = ExtResource("2_nabju")
+
+[node name="back-wheel" parent="." instance=ExtResource("2_rpv47")]
+position = Vector2(570, 194)
+
+[node name="front-wheel" parent="." instance=ExtResource("2_rpv47")]
+position = Vector2(-478, 190)

@@ -1,0 +1,72 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://ukbc5q3m8ws5"]
+
+[ext_resource type="Texture2D" uid="uid://b4m1a3hr5l0eg" path="res://assets/OurAssets/tire/tire-spritesheet.png" id="1_hbj1w"]
+[ext_resource type="Texture2D" uid="uid://o22x6n571fcf" path="res://assets/OurAssets/tire/tire-90.png" id="2_d6ugq"]
+[ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="3_7xkpj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8kq0"]
+atlas = ExtResource("2_d6ugq")
+region = Rect2(0, 0, 243, 243)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46yco"]
+atlas = ExtResource("3_7xkpj")
+region = Rect2(62, 43, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2gs7"]
+atlas = ExtResource("1_hbj1w")
+region = Rect2(747, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gylyp"]
+atlas = ExtResource("1_hbj1w")
+region = Rect2(498, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lid2w"]
+atlas = ExtResource("1_hbj1w")
+region = Rect2(249, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggutb"]
+atlas = ExtResource("1_hbj1w")
+region = Rect2(0, 0, 249, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm3x0"]
+atlas = ExtResource("2_d6ugq")
+region = Rect2(0, 0, 243, 243)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8kq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46yco")
+}],
+"loop": false,
+"name": &"going_flat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2gs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gylyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lid2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggutb")
+}],
+"loop": true,
+"name": &"rolling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xm3x0")
+}],
+"loop": true,
+"name": &"stopped_wheel",
+"speed": 5.0
+}]
