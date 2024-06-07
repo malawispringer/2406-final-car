@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwdm3ct8ofa0n"]
+
+[ext_resource type="Texture2D" uid="uid://grw5jukxyuaf" path="res://assets/OurAssets/Backgrounds/blankbackground.jpg" id="1_7fb0b"]
+[ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="2_gmdjd"]
+[ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="3_vcqp3"]
+[ext_resource type="PackedScene" path="res://scenes/inventory - Copy.tscn" id="5_55jte"]
+[ext_resource type="Texture2D" uid="uid://cajr0rhpybm7o" path="res://assets/OurAssets/bolt/bolt pic-modified.png" id="5_d2vt3"]
+
+[node name="LooseningBolts" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1146.0
+offset_bottom = 678.0
+texture = ExtResource("1_7fb0b")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Node2D"]
+offset_left = 3.0
+offset_right = 844.0
+offset_bottom = 556.0
+texture = ExtResource("2_gmdjd")
+
+[node name="FlatTire" type="Sprite2D" parent="."]
+position = Vector2(456.5, 370.5)
+scale = Vector2(1.26239, 1.18671)
+texture = ExtResource("3_vcqp3")
+
+[node name="Inventory" parent="." instance=ExtResource("5_55jte")]
+offset_left = 1060.0
+offset_right = 1078.0
+offset_bottom = 6.0
+
+[node name="BoltPic-modified" type="Sprite2D" parent="."]
+position = Vector2(492, 387)
+scale = Vector2(0.0328566, 0.0307204)
+texture = ExtResource("5_d2vt3")
+
+[node name="BoltPic-modified2" type="Sprite2D" parent="."]
+position = Vector2(463, 387)
+scale = Vector2(0.0332043, 0.0311474)
+texture = ExtResource("5_d2vt3")
+
+[node name="BoltPic-modified3" type="Sprite2D" parent="."]
+position = Vector2(464, 409)
+scale = Vector2(0.0332043, 0.0311474)
+texture = ExtResource("5_d2vt3")
+
+[node name="BoltPic-modified4" type="Sprite2D" parent="."]
+position = Vector2(492, 409)
+scale = Vector2(0.0332043, 0.0311474)
+texture = ExtResource("5_d2vt3")
