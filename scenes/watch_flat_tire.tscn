@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://bn0d24xruu874"]
 
-[ext_resource type="Texture2D" uid="uid://c7ebfyaqgvi8r" path="res://assets/placeholders/random-grass.jpg" id="1_t53di"]
+[ext_resource type="Texture2D" uid="uid://grw5jukxyuaf" path="res://assets/OurAssets/Backgrounds/blankbackground.jpg" id="1_hia34"]
 [ext_resource type="PackedScene" uid="uid://dkb1wm51cygdg" path="res://scenes/moving_car.tscn" id="2_u6pye"]
 
 [node name="watch-flat-tire" type="Node2D"]
 
 [node name="bkgd" type="Sprite2D" parent="."]
-position = Vector2(579, 323)
-scale = Vector2(1.92667, 1.78889)
-texture = ExtResource("1_t53di")
+position = Vector2(634, 300.75)
+scale = Vector2(4.01887, 4.36792)
+texture = ExtResource("1_hia34")
 
 [node name="moving-car" parent="." instance=ExtResource("2_u6pye")]
 position = Vector2(989, 420)

@@ -1,12 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwdm3ct8ofa0n"]
+[gd_scene load_steps=13 format=3 uid="uid://bwdm3ct8ofa0n"]
 
-[ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="1_p7wm0"]
 [ext_resource type="Script" path="res://scripts/loosening_bolts.gd" id="1_rb6cx"]
 [ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="2_gmdjd"]
+[ext_resource type="Texture2D" uid="uid://ditoaw7dbv3xv" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="2_nuxkb"]
 [ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="3_vcqp3"]
-[ext_resource type="PackedScene" path="res://scenes/inventory - Copy.tscn" id="5_55jte"]
+[ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="5_55jte"]
 [ext_resource type="Texture2D" uid="uid://cajr0rhpybm7o" path="res://assets/OurAssets/bolt/bolt pic-modified.png" id="5_d2vt3"]
-[ext_resource type="PackedScene" path="res://scenes/slot_object.tscn" id="7_xiquw"]
+[ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="8_uidhx"]
+[ext_resource type="Texture2D" uid="uid://dddojvwkbc3vd" path="res://assets/OurAssets/Wreeeench-modified.png" id="9_swfjq"]
+[ext_resource type="Texture2D" uid="uid://382iqc6bl1y" path="res://assets/OurAssets/tire/Tire-modified.png" id="10_sc4aa"]
+[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/car_jack.tscn" id="11_h4wob"]
+[ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="12_ss8py"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b6r0t"]
+radius = 50.0
 
 [node name="LooseningBolts" type="Node2D"]
 script = ExtResource("1_rb6cx")
@@ -16,7 +23,7 @@ offset_left = -17.0
 offset_top = -1157.0
 offset_right = 3650.0
 offset_bottom = 924.0
-texture = ExtResource("1_p7wm0")
+texture = ExtResource("2_nuxkb")
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -35,8 +42,13 @@ texture = ExtResource("3_vcqp3")
 offset_left = 967.0
 offset_right = 985.0
 offset_bottom = 6.0
+metadata/_edit_lock_ = true
 
 [node name="Bolts" type="Node" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bolts"]
+position = Vector2(478, 397)
+shape = SubResource("CircleShape2D_b6r0t")
 
 [node name="BoltPic-modified" type="Sprite2D" parent="Bolts"]
 position = Vector2(492, 387)
@@ -58,8 +70,38 @@ position = Vector2(492, 409)
 scale = Vector2(0.0332043, 0.0311474)
 texture = ExtResource("5_d2vt3")
 
-[node name="slot_object" parent="." instance=ExtResource("7_xiquw")]
-offset_left = 453.0
-offset_top = 372.0
-offset_right = 508.0
-offset_bottom = 427.0
+[node name="Prompt" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 552.0
+offset_right = 626.0
+offset_bottom = 609.0
+theme_override_colors/font_shadow_color = Color(0.18359, 0.18359, 0.18359, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_fonts/font = ExtResource("8_uidhx")
+theme_override_font_sizes/font_size = 26
+text = "USE THE WRENCH TO LOOSEN THE BOLTS ON OUR FLAT TIRE"
+autowrap_mode = 2
+
+[node name="Wreeeench-modified" type="Sprite2D" parent="."]
+position = Vector2(1058, 106)
+scale = Vector2(0.258906, 0.242556)
+texture = ExtResource("9_swfjq")
+
+[node name="Tire-modified" type="Sprite2D" parent="."]
+position = Vector2(1068, 339)
+scale = Vector2(0.443038, 0.424198)
+texture = ExtResource("10_sc4aa")
+
+[node name="car-jack" parent="." instance=ExtResource("11_h4wob")]
+offset_left = 973.0
+offset_top = 180.0
+offset_right = 1133.0
+offset_bottom = 272.0
+texture = ExtResource("12_ss8py")
+expand_mode = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.471
+
+[connection signal="child_entered_tree" from="Bolts/CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
