@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://grw5jukxyuaf" path="res://assets/OurAssets/Backgrounds/blankbackground.jpg" id="1_dm0tg"]
 [ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="2_ppctj"]
-[ext_resource type="PackedScene" path="res://scenes/car_trunk.tscn" id="2_rk00g"]
 [ext_resource type="Texture2D" uid="uid://dgds8l1jru3b3" path="res://assets/OurAssets/Car Views/TRUNK-modified.png" id="3_pdnht"]
-[ext_resource type="PackedScene" path="res://scenes/inventory.tscn" id="3_x6xly"]
+[ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="5_86wbe"]
 [ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/car_jack.tscn" id="5_f3ryj"]
 [ext_resource type="PackedScene" path="res://scenes/slot_object.tscn" id="6_6g2k3"]
 [ext_resource type="PackedScene" path="res://scenes/inventory - Copy.tscn" id="7_dwgl6"]
+[ext_resource type="Texture2D" uid="uid://cjgv1nvsfj4ce" path="res://assets/OurAssets/first aid.png" id="8_4m8dx"]
 
 [node name="get-items-from-trunk" type="Sprite2D"]
 position = Vector2(583, 321)
@@ -22,21 +22,22 @@ offset_right = 1285.0
 offset_bottom = 365.0
 texture = ExtResource("2_ppctj")
 
-[node name="Car-Trunk" parent="." instance=ExtResource("2_rk00g")]
-position = Vector2(-14, 1)
+[node name="TrunkImage" type="TextureRect" parent="."]
+offset_left = -272.204
+offset_top = -177.247
+offset_right = 197.796
+offset_bottom = 184.753
 texture = ExtResource("3_pdnht")
-region_enabled = true
-region_rect = Rect2(43, 123, 272, 196.906)
-
-[node name="Inventory" parent="." instance=ExtResource("3_x6xly")]
-offset_left = 406.994
-offset_top = -162.385
-offset_right = 407.218
-offset_bottom = -162.385
+expand_mode = 1
 
 [node name="car-jack" parent="." instance=ExtResource("5_f3ryj")]
-offset_top = 52.0
-offset_bottom = 108.0
+custom_minimum_size = Vector2(20, 20)
+offset_left = 22.5525
+offset_top = 86.9723
+offset_right = 90.5525
+offset_bottom = 126.972
+texture = ExtResource("5_86wbe")
+expand_mode = 1
 
 [node name="slot_object" parent="." instance=ExtResource("6_6g2k3")]
 offset_left = -291.0
@@ -45,7 +46,15 @@ offset_right = -807.0
 offset_bottom = -191.0
 
 [node name="Inventory2" parent="." instance=ExtResource("7_dwgl6")]
-offset_left = 206.644
+offset_left = 211.889
 offset_top = -176.697
-offset_right = 206.868
+offset_right = 212.113
 offset_bottom = -176.697
+
+[node name="FirstAid" type="TextureRect" parent="."]
+offset_left = -150.001
+offset_top = 44.0366
+offset_right = -95.0005
+offset_bottom = 97.0366
+texture = ExtResource("8_4m8dx")
+expand_mode = 1
