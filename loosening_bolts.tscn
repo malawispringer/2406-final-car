@@ -18,7 +18,7 @@ texture = ExtResource("1_p7wm0")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="Node2D"]
-offset_left = 3.0
+offset_left = -5.0
 offset_right = 844.0
 offset_bottom = 556.0
 texture = ExtResource("2_gmdjd")
