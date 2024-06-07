@@ -5,15 +5,14 @@
 [node name="slot_object" type="TextureRect"]
 clip_contents = true
 custom_minimum_size = Vector2(100, 95)
-anchors_preset = -1
-anchor_right = 0.208
-anchor_bottom = 0.301
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 3.0
 offset_top = -7.0
-offset_right = -113.616
-offset_bottom = -98.048
+offset_right = -90.576
+offset_bottom = -39.08
 grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
-stretch_mode = 3
 script = ExtResource("1_vcnan")

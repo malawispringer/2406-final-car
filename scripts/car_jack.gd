@@ -18,6 +18,6 @@ func _get_drag_data(at_position):
 	dragPreview.custom_minimum_size = Vector2(60,60)
 	set_drag_preview(dragPreview)
 	#self.visible = false	
-	print("targetcontainer getting drag_data has run")
+	print("external drag data3 has run")
 	return self
 	

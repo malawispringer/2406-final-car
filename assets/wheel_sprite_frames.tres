@@ -1,7 +1,8 @@
-[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://d131lcvcm31yr"]
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://d131lcvcm31yr"]
 
 [ext_resource type="Texture2D" uid="uid://b4m1a3hr5l0eg" path="res://assets/OurAssets/tire/tire-spritesheet.png" id="1_lkm6c"]
 [ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="2_5wgtx"]
+[ext_resource type="Texture2D" uid="uid://o22x6n571fcf" path="res://assets/OurAssets/tire/tire-90.png" id="3_c86ay"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1ewb"]
 atlas = ExtResource("1_lkm6c")
@@ -35,6 +36,10 @@ region = Rect2(249, 0, 249, 250)
 atlas = ExtResource("1_lkm6c")
 region = Rect2(0, 0, 249, 250)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gegt"]
+atlas = ExtResource("3_c86ay")
+region = Rect2(0, 0, 243, 243)
+
 [resource]
 animations = [{
 "frames": [{
@@ -53,8 +58,8 @@ animations = [{
 "duration": 5.0,
 "texture": ExtResource("2_5wgtx")
 }],
-"loop": true,
-"name": &"going flat",
+"loop": false,
+"name": &"going_flat",
 "speed": 5.0
 }, {
 "frames": [{
@@ -72,5 +77,13 @@ animations = [{
 }],
 "loop": true,
 "name": &"rolling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gegt")
+}],
+"loop": true,
+"name": &"stopped_wheel",
 "speed": 5.0
 }]

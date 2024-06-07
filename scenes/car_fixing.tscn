@@ -7,7 +7,7 @@
 [node name="Car Fixing" type="Node2D"]
 
 [node name="bkgd" type="Sprite2D" parent="."]
-position = Vector2(-221, -75)
+position = Vector2(336, 316)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_ia6wh")
 

@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://k5e2fgvd1n6h"]
+[gd_scene load_steps=3 format=3 uid="uid://k5e2fgvd1n6h"]
 
 [ext_resource type="SpriteFrames" uid="uid://d131lcvcm31yr" path="res://assets/wheel_sprite_frames.tres" id="1_d7iyj"]
+[ext_resource type="Script" path="res://scripts/wheel.gd" id="2_tjjs4"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 position = Vector2(174, 55)
 sprite_frames = ExtResource("1_d7iyj")
-animation = &"going flat"
-frame = 1
-frame_progress = 0.139749
+animation = &"stopped_wheel"
+script = ExtResource("2_tjjs4")

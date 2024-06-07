@@ -3,7 +3,6 @@ extends Control
 @onready var main_container = $TextureRect/GridContainer
 
 func _ready() -> void:
-	
 	pass 
 
 func _get_drag_data(at_position):
@@ -22,15 +21,15 @@ func _can_drop_data(at_position, data):
 	print("we can dropp")
 	return targetSlotNode != null or can_drop
 	
-func _drop_data(at_position, dragSlotNode) -> void:
-	print("targetcontainer drop_data_has run")
-	var targetSlotNode = _get_slot_node_at_position(at_position)
-	
-	targetSlotNode.texture = dragSlotNode.texture
-	if targetSlotNode.texture  == null:
-		dragSlotNode.texture = null
-	else:
-		dragSlotNode.texture = targetSlotNode.texture 
+#func _drop_data(at_position, dragSlotNode) -> void:
+#	print("targetcontainer drop_data_has run")
+#	var targetSlotNode = _get_slot_node_at_position(at_position)
+#	
+#	targetSlotNode.texture = dragSlotNode.texture
+#	if targetSlotNode.texture  == null:
+#		dragSlotNode.texture = null
+#	else:
+#		dragSlotNode.texture = targetSlotNode.texture 
 	
 	
 func _get_slot_node_at_position(position):
