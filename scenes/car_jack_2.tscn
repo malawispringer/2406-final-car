@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://gtwcmp0jvix4"]
+[gd_scene load_steps=8 format=3 uid="uid://gtwcmp0jvix4"]
 
 [ext_resource type="Texture2D" uid="uid://ditoaw7dbv3xv" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="1_8unl6"]
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_5jc7w"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="4_8i0y7"]
 [ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="5_gmqmk"]
 [ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="6_4bg4j"]
+[ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="7_ycr6v"]
 
 [node name="CarJack2" type="Node2D"]
 
@@ -48,3 +49,16 @@ metadata/_edit_lock_ = true
 position = Vector2(201, 434.25)
 scale = Vector2(1, 2.00505)
 texture = ExtResource("6_4bg4j")
+
+[node name="Prompt" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 552.0
+offset_right = 626.0
+offset_bottom = 609.0
+theme_override_colors/font_shadow_color = Color(0.18359, 0.18359, 0.18359, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_fonts/font = ExtResource("7_ycr6v")
+theme_override_font_sizes/font_size = 26
+text = "REMOVE THE TIRE BY CLICKING ON IT"
+autowrap_mode = 2
+metadata/_edit_lock_ = true

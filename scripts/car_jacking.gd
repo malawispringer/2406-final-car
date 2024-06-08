@@ -10,6 +10,5 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_collision_shape_2d_child_entered_tree(carJack):
 	get_tree().change_scene_to_file("res://scenes/car_jack_2.tscn")
