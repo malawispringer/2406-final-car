@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://gtwcmp0jvix4"]
+
+[ext_resource type="Texture2D" uid="uid://ditoaw7dbv3xv" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="1_8unl6"]
+[ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_5jc7w"]
+[ext_resource type="Texture2D" uid="uid://382iqc6bl1y" path="res://assets/OurAssets/tire/Tire-modified.png" id="3_fxhnp"]
+[ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="4_8i0y7"]
+[ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="5_gmqmk"]
+[ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="6_4bg4j"]
+
+[node name="CarJack2" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -17.0
+offset_top = -1157.0
+offset_right = 3650.0
+offset_bottom = 924.0
+texture = ExtResource("1_8unl6")
+metadata/_edit_lock_ = true
+
+[node name="Inventory" parent="." instance=ExtResource("2_5jc7w")]
+offset_left = 967.0
+offset_right = 985.0
+offset_bottom = 6.0
+metadata/_edit_lock_ = true
+
+[node name="Tire-modified" type="Sprite2D" parent="."]
+position = Vector2(1068, 339)
+scale = Vector2(0.443038, 0.424198)
+texture = ExtResource("3_fxhnp")
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, -24)
+
+[node name="TextureRect" type="TextureRect" parent="Node2D"]
+offset_left = -5.0
+offset_right = 844.0
+offset_bottom = 556.0
+texture = ExtResource("4_8i0y7")
+
+[node name="FlatTire" type="Sprite2D" parent="."]
+position = Vector2(456.5, 370.5)
+scale = Vector2(1.26239, 1.18671)
+texture = ExtResource("5_gmqmk")
+metadata/_edit_lock_ = true
+
+[node name="Jack1" type="Sprite2D" parent="."]
+position = Vector2(201, 434.25)
+scale = Vector2(1, 2.00505)
+texture = ExtResource("6_4bg4j")
