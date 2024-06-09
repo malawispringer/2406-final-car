@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/loosening_bolts.gd" id="1_rb6cx"]
 [ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="2_gmdjd"]
-[ext_resource type="Texture2D" uid="uid://ditoaw7dbv3xv" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="2_nuxkb"]
+[ext_resource type="Texture2D" uid="uid://cy732yusg1qfg" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="2_nuxkb"]
 [ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="3_vcqp3"]
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="5_55jte"]
 [ext_resource type="Texture2D" uid="uid://cajr0rhpybm7o" path="res://assets/OurAssets/bolt/bolt pic-modified.png" id="5_d2vt3"]
@@ -80,7 +80,7 @@ theme_override_colors/font_shadow_color = Color(0.18359, 0.18359, 0.18359, 1)
 theme_override_constants/shadow_offset_x = -3
 theme_override_fonts/font = ExtResource("8_uidhx")
 theme_override_font_sizes/font_size = 26
-text = "USE THE WRENCH TO LOOSEN THE BOLTS ON OUR FLAT TIRE"
+text = "DRAG THE WRENCH OVER THE BOLTS TO LOOSEN THEM"
 autowrap_mode = 2
 metadata/_edit_lock_ = true
 
