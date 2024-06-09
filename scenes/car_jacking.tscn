@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dl62g1h2s0xum"]
 
-[ext_resource type="Texture2D" uid="uid://ditoaw7dbv3xv" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="1_tbmvw"]
 [ext_resource type="Script" path="res://scripts/car_jacking.gd" id="1_vgmlq"]
+[ext_resource type="Texture2D" uid="uid://ca6o7ya8gtac2" path="res://assets/OurAssets/Backgrounds/hi-clearer.png" id="2_6tp6c"]
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_be1cv"]
 [ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="3_5qlfk"]
 [ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="4_5oxnm"]
@@ -21,7 +21,7 @@ offset_left = -17.0
 offset_top = -1157.0
 offset_right = 3650.0
 offset_bottom = 924.0
-texture = ExtResource("1_tbmvw")
+texture = ExtResource("2_6tp6c")
 metadata/_edit_lock_ = true
 
 [node name="Inventory" parent="." instance=ExtResource("2_be1cv")]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bqwmhvpwi07l4"]
 
-[ext_resource type="Texture2D" uid="uid://ditoaw7dbv3xv" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="1_xl6k7"]
+[ext_resource type="Texture2D" uid="uid://cy732yusg1qfg" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="1_xl6k7"]
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_p5vbn"]
 [ext_resource type="Texture2D" uid="uid://382iqc6bl1y" path="res://assets/OurAssets/tire/Tire-modified.png" id="3_prhg3"]
 [ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="4_804la"]
