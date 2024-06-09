@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bmcobuad8ibbb"]
 
-[ext_resource type="PackedScene" uid="uid://cop2u1axy6hry" path="res://scenes/inventory - Copy.tscn" id="1_5qgfu"]
+[ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="1_5qgfu"]
 [ext_resource type="PackedScene" uid="uid://bfjujd20xerji" path="res://scenes/first-aid.tscn" id="2_4jown"]
 [ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/wrench.tscn" id="3_owp53"]
 [ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="4_q7egs"]

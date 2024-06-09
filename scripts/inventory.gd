@@ -6,15 +6,15 @@ extends Control
 func _ready() -> void:
 	pass 
 # Once object has been clicked
-func _get_drag_data(at_position):
-	var dragSlotNode = _get_slot_node_at_position(at_position).get_child
-	#if dragSlotNode.texture == null: return
-	#print (dragSlotNode)
-	var dragPreviewNode = dragSlotNode.duplicate()
-	dragPreviewNode.custom_minimum_size = Vector2(60,60)
-	set_drag_preview(dragPreviewNode)
-	print("targetcontainer getting drag_data has run")
-	return dragSlotNode
+#func _get_drag_data(at_position):
+#	var dragSlotNode = _get_slot_node_at_position(at_position).get_child
+#	#if dragSlotNode.texture == null: return
+#	#print (dragSlotNode)
+#	var dragPreviewNode = dragSlotNode.duplicate()
+#	dragPreviewNode.custom_minimum_size = Vector2(60,60)
+#	set_drag_preview(dragPreviewNode)
+#	print("targetcontainer getting drag_data has run")
+#	return dragSlotNode
 	
 # Only allows for the object to be dropped in a particular area
 func _can_drop_data(at_position, data):

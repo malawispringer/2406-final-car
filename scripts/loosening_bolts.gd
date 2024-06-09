@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var wrench = $"Wreeeench-modified"
+@onready var wrench = $wrench
 @onready var bolts = [$"Bolts/BoltPic-modified",$"Bolts/BoltPic-modified2",$"Bolts/BoltPic-modified3",$"Bolts/BoltPic-modified4"]
 @onready var timer = $Timer
 

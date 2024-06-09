@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dl62g1h2s0xum"]
+[gd_scene load_steps=11 format=3 uid="uid://dl62g1h2s0xum"]
 
 [ext_resource type="Script" path="res://scripts/car_jacking.gd" id="1_vgmlq"]
 [ext_resource type="Texture2D" uid="uid://ca6o7ya8gtac2" path="res://assets/OurAssets/Backgrounds/hi-clearer.png" id="2_6tp6c"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="6_begvn"]
 [ext_resource type="Texture2D" uid="uid://382iqc6bl1y" path="res://assets/OurAssets/tire/Tire-modified.png" id="7_k6h4y"]
 [ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="8_i2ghi"]
-[ext_resource type="PackedScene" uid="uid://b82kj05aojs2c" path="res://scenes/slot_object.tscn" id="10_sfjus"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1yr"]
 size = Vector2(127, 173)
@@ -17,7 +16,7 @@ size = Vector2(127, 173)
 [node name="CarJacking" type="Node2D"]
 script = ExtResource("1_vgmlq")
 
-[node name="bkgd" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -17.0
 offset_top = -1157.0
 offset_right = 3650.0
@@ -34,7 +33,7 @@ metadata/_edit_lock_ = true
 [node name="Node2D" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
-[node name="car" type="TextureRect" parent="Node2D"]
+[node name="TextureRect" type="TextureRect" parent="Node2D"]
 offset_left = -5.0
 offset_right = 844.0
 offset_bottom = 556.0
@@ -79,11 +78,5 @@ theme_override_font_sizes/font_size = 26
 text = "PLACE THE JACK IN FRONT OF THE TIRE"
 autowrap_mode = 2
 metadata/_edit_lock_ = true
-
-[node name="slot_object" parent="." instance=ExtResource("10_sfjus")]
-offset_left = 108.0
-offset_top = 394.0
-offset_right = 238.0
-offset_bottom = 568.0
 
 [connection signal="child_entered_tree" from="Area2D/CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqwmhvpwi07l4"]
+[gd_scene load_steps=7 format=3 uid="uid://bbwn4njr2iean"]
 
 [ext_resource type="Texture2D" uid="uid://cy732yusg1qfg" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="1_xl6k7"]
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_p5vbn"]
