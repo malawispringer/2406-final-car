@@ -1,3 +1,4 @@
+class_name removeFlat
 extends TextureRect
 
 
@@ -21,4 +22,5 @@ func _get_drag_data(at_position):
 	#self.visible = false	
 	print("targetcontainer getting drag_data has run")
 	return self
+	
 	
