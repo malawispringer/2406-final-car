@@ -23,4 +23,4 @@ func _get_drag_data(at_position):
 	print("targetcontainer getting drag_data has run")
 	return self
 	
-	
+	# Remove the tire and continue to the next scene

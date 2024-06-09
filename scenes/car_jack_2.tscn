@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://gtwcmp0jvix4"]
+[gd_scene load_steps=9 format=3 uid="uid://gtwcmp0jvix4"]
 
 [ext_resource type="Texture2D" uid="uid://ca6o7ya8gtac2" path="res://assets/OurAssets/Backgrounds/hi-clearer.png" id="1_nnjrd"]
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_5jc7w"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="5_gmqmk"]
 [ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="6_4bg4j"]
 [ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="7_ycr6v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ubfl"]
+radius = 110.431
 
 [node name="CarJack2" type="Node2D"]
 
@@ -34,9 +37,10 @@ metadata/_edit_lock_ = true
 position = Vector2(0, -24)
 
 [node name="TextureRect" type="TextureRect" parent="Node2D"]
-offset_left = -5.0
-offset_right = 844.0
-offset_bottom = 556.0
+offset_left = 34.0
+offset_top = -12.0
+offset_right = 883.0
+offset_bottom = 544.0
 texture = ExtResource("4_8i0y7")
 
 [node name="Jack1" type="Sprite2D" parent="."]
@@ -65,10 +69,6 @@ scale = Vector2(1.26239, 1.18671)
 texture = ExtResource("5_gmqmk")
 metadata/_edit_lock_ = true
 
-[node name="Button" type="Button" parent="Flat/FlatTire"]
-offset_left = -101.0
-offset_top = -88.0
-offset_right = 125.0
-offset_bottom = 122.0
-
-[connection signal="button_down" from="Flat/FlatTire/Button" to="Inventory" method="_on_button_button_down"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flat/FlatTire"]
+position = Vector2(20.1998, 22.3306)
+shape = SubResource("CircleShape2D_8ubfl")
