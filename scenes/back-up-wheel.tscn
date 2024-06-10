@@ -1,12 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dh427xt5tki1n"]
 
-[ext_resource type="Texture2D" uid="uid://bad1lxb1ee0yc" path="res://assets/placeholders/car-jack-smaller.png" id="1_xpruf"]
+[ext_resource type="Texture2D" uid="uid://o22x6n571fcf" path="res://assets/OurAssets/tire/tire-90.png" id="1_rbnn2"]
 [ext_resource type="Script" path="res://scripts/car_jack.gd" id="2_bayhk"]
 
-[node name="car-jack" type="TextureRect"]
+[node name="back-up-wheel" type="TextureRect"]
+custom_minimum_size = Vector2(100, 100)
 offset_left = -27.0
 offset_top = -26.0
 offset_right = 29.0
 offset_bottom = 30.0
-texture = ExtResource("1_xpruf")
+texture = ExtResource("1_rbnn2")
+expand_mode = 1
 script = ExtResource("2_bayhk")

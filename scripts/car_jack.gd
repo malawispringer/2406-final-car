@@ -15,7 +15,7 @@ func _get_drag_data(at_position):
 	#var preview = TextureRect.new()
 	#preview.texture = texture
 	var dragPreview = self.duplicate()	
-	dragPreview.custom_minimum_size = Vector2(60,60)
+	dragPreview.custom_minimum_size = Vector2(300,300)
 	set_drag_preview(dragPreview)
 	#self.visible = false	
 	print("external drag data3 has run")

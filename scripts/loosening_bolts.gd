@@ -17,10 +17,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if $slot_object.hasItem == true: 
-		await get_tree().create_timer(0.15).timeout 
-		get_tree().change_scene_to_file("res://scenes/car_jacking.tscn")
-	pass
+	if $slot_object.hasItem == true:
+		if $slot_object.get_child(0) == $wrench:
+			await get_tree().create_timer(3).timeout 
+			get_tree().change_scene_to_file("res://scenes/3car_jacking.tscn")
+		else:
+			$Prompt.text = "PLEASE USE THE WRENCH"
+			await get_tree().create_timer(0.5).timeout
+			$slot_object.remove_child($"car-jack")
+			#$slot_object.remove_child($"back-up-wheel")
 
 func _on_collision_shape_2d_child_entered_tree(wrench):
 	bolts.queue_free()
