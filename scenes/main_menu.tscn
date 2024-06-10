@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://b4nj1p2ff7tlp" path="res://assets/OurAssets/Buttons/better.png" id="5_g8llt"]
 
 [node name="Main Menu" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,5 +103,5 @@ texture = ExtResource("5_g8llt")
 expand_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/Start Button" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer2/QUIT" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/QUIT" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer2/QUIT" to="." method="_on_start_button_pressed"]
