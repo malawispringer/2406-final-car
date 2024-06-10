@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://b8vab17m5w6ul"]
+
+[ext_resource type="Texture2D" uid="uid://ca6o7ya8gtac2" path="res://assets/OurAssets/Backgrounds/hi-clearer.png" id="1_ylpme"]
+[ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_dq8cl"]
+[ext_resource type="Script" path="res://scripts/flat-tire.gd" id="4_387ed"]
+[ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="5_r7fgo"]
+[ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="6_xmmea"]
+[ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="7_4bsxg"]
+[ext_resource type="PackedScene" uid="uid://chtiy6yici338" path="res://scenes/backup_wheel_2.tscn" id="8_0jmio"]
+[ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="8_w8ajw"]
+[ext_resource type="PackedScene" uid="uid://35dlb33opsr3" path="res://scenes/wrench_2.tscn" id="9_7pthy"]
+
+[node name="CarJack2" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -17.0
+offset_top = -1157.0
+offset_right = 3650.0
+offset_bottom = 924.0
+texture = ExtResource("1_ylpme")
+metadata/_edit_lock_ = true
+
+[node name="Inventory" parent="." instance=ExtResource("2_dq8cl")]
+z_index = 5
+offset_left = 967.0
+offset_right = 985.0
+offset_bottom = 6.0
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, -24)
+
+[node name="TextureRect" type="TextureRect" parent="Node2D"]
+offset_left = -11.0
+offset_top = -16.0
+offset_right = 838.0
+offset_bottom = 540.0
+texture = ExtResource("5_r7fgo")
+
+[node name="Jack1" type="Sprite2D" parent="."]
+position = Vector2(201, 434.25)
+scale = Vector2(1, 2.00505)
+texture = ExtResource("6_xmmea")
+
+[node name="Prompt" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 552.0
+offset_right = 626.0
+offset_bottom = 609.0
+theme_override_colors/font_shadow_color = Color(0.18359, 0.18359, 0.18359, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_fonts/font = ExtResource("7_4bsxg")
+theme_override_font_sizes/font_size = 26
+text = "REMOVE THE FLAT TIRE BY CLICKING ON IT"
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Flat" type="Node" parent="."]
+
+[node name="FlatTire" type="Sprite2D" parent="Flat"]
+position = Vector2(456.5, 370.5)
+scale = Vector2(1.26239, 1.18671)
+texture = ExtResource("8_w8ajw")
+script = ExtResource("4_387ed")
+metadata/_edit_lock_ = true
+
+[node name="backup-wheel2" parent="." instance=ExtResource("8_0jmio")]
+z_index = 10
+offset_left = 1003.0
+offset_top = 298.0
+offset_right = 1103.0
+offset_bottom = 398.0
+
+[node name="wrench2" parent="." instance=ExtResource("9_7pthy")]
+z_index = 6
+offset_left = 1011.0
+offset_top = 51.0
+offset_right = 1111.0
+offset_bottom = 151.0

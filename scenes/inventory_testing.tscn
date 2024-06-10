@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="1_5qgfu"]
 [ext_resource type="PackedScene" uid="uid://bfjujd20xerji" path="res://scenes/first-aid.tscn" id="2_4jown"]
-[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/wrench.tscn" id="3_owp53"]
 [ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="4_q7egs"]
-[ext_resource type="PackedScene" uid="uid://dyao3hemrpb4v" path="res://scenes/bolt.tscn" id="5_2rk1e"]
+[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/wrench.tscn" id="5_05nd8"]
+[ext_resource type="PackedScene" uid="uid://chtiy6yici338" path="res://scenes/backup_wheel_2.tscn" id="5_pc4ja"]
 
 [node name="inventory-testing" type="Node2D"]
 
@@ -18,18 +18,27 @@ offset_top = -31.0
 offset_right = 460.0
 offset_bottom = 213.0
 
-[node name="car-jack" parent="." instance=ExtResource("3_owp53")]
+[node name="car-jack" parent="." instance=ExtResource("5_05nd8")]
 offset_left = 69.0
 offset_top = 18.0
 offset_right = 169.0
 offset_bottom = 118.0
 texture = ExtResource("4_q7egs")
 
-[node name="wrench" parent="." instance=ExtResource("3_owp53")]
+[node name="wrench" parent="." instance=ExtResource("5_05nd8")]
 offset_left = 1018.0
 offset_top = 50.0
 offset_right = 1118.0
 offset_bottom = 150.0
 
-[node name="Bolt" parent="." instance=ExtResource("5_2rk1e")]
-position = Vector2(515, 427)
+[node name="back-up-wheel" parent="." instance=ExtResource("5_05nd8")]
+offset_left = 1007.0
+offset_top = 177.0
+offset_right = 1107.0
+offset_bottom = 277.0
+
+[node name="backup-wheel2" parent="." instance=ExtResource("5_pc4ja")]
+offset_left = 1013.0
+offset_top = 307.0
+offset_right = 1113.0
+offset_bottom = 407.0

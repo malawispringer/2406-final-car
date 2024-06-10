@@ -1,12 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dh427xt5tki1n"]
 
 [ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="1_0ohok"]
-[ext_resource type="Script" path="res://scripts/car_jack.gd" id="2_bayhk"]
+[ext_resource type="Script" path="res://scripts/car_jack (2).gd" id="2_yyb0f"]
 
 [node name="car-jack" type="TextureRect"]
+custom_minimum_size = Vector2(150, 100)
 offset_left = -27.0
 offset_top = -26.0
 offset_right = 29.0
 offset_bottom = 30.0
 texture = ExtResource("1_0ohok")
-script = ExtResource("2_bayhk")
+expand_mode = 1
+script = ExtResource("2_yyb0f")

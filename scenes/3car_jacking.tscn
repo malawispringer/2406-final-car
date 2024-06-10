@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="3_oax55"]
 [ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="4_a6fxd"]
 [ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="5_e30wm"]
-[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/wrench.tscn" id="6_8q50f"]
-[ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="7_poqoi"]
+[ext_resource type="PackedScene" uid="uid://chtiy6yici338" path="res://scenes/backup_wheel_2.tscn" id="9_xyo45"]
+[ext_resource type="PackedScene" uid="uid://brk7omheycl6s" path="res://scenes/carjack_2.tscn" id="10_butmu"]
+[ext_resource type="PackedScene" uid="uid://35dlb33opsr3" path="res://scenes/wrench_2.tscn" id="10_pqxjh"]
 [ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="10_uyhlb"]
-[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/back-up-wheel.tscn" id="10_vrx3t"]
 [ext_resource type="PackedScene" uid="uid://b82kj05aojs2c" path="res://scenes/slot_object.tscn" id="11_yia5c"]
 
 [node name="CarJacking" type="Node2D"]
@@ -44,14 +44,6 @@ scale = Vector2(1.26239, 1.18671)
 texture = ExtResource("5_e30wm")
 metadata/_edit_lock_ = true
 
-[node name="car-jack" parent="." instance=ExtResource("6_8q50f")]
-offset_left = 973.0
-offset_top = 180.0
-offset_right = 1133.0
-offset_bottom = 272.0
-texture = ExtResource("7_poqoi")
-metadata/_edit_lock_ = true
-
 [node name="Prompt" type="Label" parent="."]
 offset_left = 25.0
 offset_top = 552.0
@@ -71,8 +63,20 @@ offset_top = 394.0
 offset_right = 238.0
 offset_bottom = 568.0
 
-[node name="back-up-wheel" parent="." instance=ExtResource("10_vrx3t")]
-offset_left = 1005.0
-offset_top = 294.0
-offset_right = 1105.0
-offset_bottom = 394.0
+[node name="backup-wheel2" parent="." instance=ExtResource("9_xyo45")]
+offset_left = 1006.0
+offset_top = 297.0
+offset_right = 1106.0
+offset_bottom = 397.0
+
+[node name="wrench2" parent="." instance=ExtResource("10_pqxjh")]
+offset_left = 1008.0
+offset_top = 56.0
+offset_right = 1108.0
+offset_bottom = 156.0
+
+[node name="carjack2" parent="." instance=ExtResource("10_butmu")]
+offset_left = 976.0
+offset_top = 178.0
+offset_right = 1126.0
+offset_bottom = 278.0

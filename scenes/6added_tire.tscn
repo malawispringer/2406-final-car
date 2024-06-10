@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://bbwn4njr2iean"]
+
+[ext_resource type="Script" path="res://scripts/scene6.gd" id="1_upp4g"]
+[ext_resource type="Texture2D" uid="uid://cy732yusg1qfg" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="1_xl6k7"]
+[ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_p5vbn"]
+[ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="4_804la"]
+[ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="5_e5cdj"]
+[ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="6_lpueq"]
+[ext_resource type="Texture2D" uid="uid://o22x6n571fcf" path="res://assets/OurAssets/tire/tire-90.png" id="6_pu4t6"]
+[ext_resource type="PackedScene" uid="uid://35dlb33opsr3" path="res://scenes/wrench_2.tscn" id="7_urlch"]
+[ext_resource type="PackedScene" uid="uid://b82kj05aojs2c" path="res://scenes/slot_object.tscn" id="8_2j8fb"]
+
+[node name="Node2D2" type="Node2D"]
+
+[node name="AddedTire" type="Node2D" parent="."]
+script = ExtResource("1_upp4g")
+
+[node name="TextureRect" type="TextureRect" parent="AddedTire"]
+offset_left = -17.0
+offset_top = -1157.0
+offset_right = 3650.0
+offset_bottom = 924.0
+texture = ExtResource("1_xl6k7")
+metadata/_edit_lock_ = true
+
+[node name="Inventory" parent="AddedTire" instance=ExtResource("2_p5vbn")]
+offset_left = 967.0
+offset_right = 985.0
+offset_bottom = 6.0
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="AddedTire"]
+position = Vector2(0, -24)
+
+[node name="TextureRect" type="TextureRect" parent="AddedTire/Node2D"]
+offset_left = -5.0
+offset_right = 844.0
+offset_bottom = 556.0
+texture = ExtResource("4_804la")
+
+[node name="Jack1" type="Sprite2D" parent="AddedTire"]
+position = Vector2(201, 434.25)
+scale = Vector2(1, 2.00505)
+texture = ExtResource("5_e5cdj")
+
+[node name="Prompt" type="Label" parent="AddedTire"]
+offset_left = 25.0
+offset_top = 552.0
+offset_right = 626.0
+offset_bottom = 609.0
+theme_override_colors/font_shadow_color = Color(0.18359, 0.18359, 0.18359, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_fonts/font = ExtResource("6_lpueq")
+theme_override_font_sizes/font_size = 26
+text = "DRAG THE WRENCH TO SCREW IN THE BOLTS OF THE SPARE TIRE"
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="tire" type="Sprite2D" parent="AddedTire"]
+position = Vector2(469, 363)
+scale = Vector2(1.22016, 1.16667)
+texture = ExtResource("6_pu4t6")
+
+[node name="wrench2" parent="AddedTire" instance=ExtResource("7_urlch")]
+offset_left = 1008.0
+offset_top = 53.0
+offset_right = 1108.0
+offset_bottom = 153.0
+
+[node name="slot_object" parent="AddedTire" instance=ExtResource("8_2j8fb")]
+offset_left = 471.0
+offset_top = 252.0
+offset_right = 592.0
+offset_bottom = 357.0

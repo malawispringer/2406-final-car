@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var wrench = $wrench
+@onready var wrench = $unconnected_wrench
 @onready var bolts = [$"Bolts/BoltPic-modified",$"Bolts/BoltPic-modified2",$"Bolts/BoltPic-modified3",$"Bolts/BoltPic-modified4"]
 @onready var timer = $Timer
 @onready var carJack = $"car-jack"
@@ -18,7 +18,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $slot_object.hasItem == true:
-		if $slot_object.get_child(0) == $wrench:
+		if $slot_object.get_child(0) == wrench:
+			$Prompt.text = "GOOD JOB"
 			await get_tree().create_timer(3).timeout 
 			get_tree().change_scene_to_file("res://scenes/3car_jacking.tscn")
 		else:

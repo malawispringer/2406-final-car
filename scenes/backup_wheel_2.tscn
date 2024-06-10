@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://chtiy6yici338"]
+
+[ext_resource type="Texture2D" uid="uid://o22x6n571fcf" path="res://assets/OurAssets/tire/tire-90.png" id="1_5g0xf"]
+[ext_resource type="Script" path="res://scripts/backup_wheel_2.gd" id="2_rdinp"]
+
+[node name="backup-wheel2" type="TextureRect"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_5g0xf")
+expand_mode = 1
+script = ExtResource("2_rdinp")

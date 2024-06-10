@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwdm3ct8ofa0n"]
+[gd_scene load_steps=13 format=3 uid="uid://bwdm3ct8ofa0n"]
 
 [ext_resource type="Script" path="res://scripts/loosening_bolts.gd" id="1_roffg"]
 [ext_resource type="Texture2D" uid="uid://cy732yusg1qfg" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="2_0w6aq"]
@@ -7,64 +7,67 @@
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="5_rt2ef"]
 [ext_resource type="Texture2D" uid="uid://cajr0rhpybm7o" path="res://assets/OurAssets/bolt/bolt pic-modified.png" id="6_0xovo"]
 [ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="7_wuds8"]
-[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/wrench.tscn" id="10_oymuq"]
-[ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="11_fbn55"]
+[ext_resource type="Texture2D" uid="uid://dddojvwkbc3vd" path="res://assets/OurAssets/Wreeeench-modified.png" id="8_ddh5l"]
+[ext_resource type="Script" path="res://scripts/wrench.gd" id="9_0226e"]
 [ext_resource type="PackedScene" uid="uid://b82kj05aojs2c" path="res://scenes/slot_object.tscn" id="12_3jp8x"]
-[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/back-up-wheel.tscn" id="12_6qbpt"]
+[ext_resource type="PackedScene" uid="uid://chtiy6yici338" path="res://scenes/backup_wheel_2.tscn" id="12_cromf"]
+[ext_resource type="PackedScene" uid="uid://brk7omheycl6s" path="res://scenes/carjack_2.tscn" id="12_nwqcr"]
 
-[node name="LooseningBolts" type="Node2D"]
+[node name="scene2" type="Node2D"]
+
+[node name="LooseningBolts" type="Node2D" parent="."]
 script = ExtResource("1_roffg")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="LooseningBolts"]
 offset_left = -17.0
 offset_top = -1157.0
 offset_right = 3650.0
 offset_bottom = 924.0
 texture = ExtResource("2_0w6aq")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="LooseningBolts"]
 
-[node name="TextureRect" type="TextureRect" parent="Node2D"]
+[node name="TextureRect" type="TextureRect" parent="LooseningBolts/Node2D"]
 offset_left = -5.0
 offset_right = 844.0
 offset_bottom = 556.0
 texture = ExtResource("3_fstyr")
 
-[node name="FlatTire" type="Sprite2D" parent="."]
+[node name="FlatTire" type="Sprite2D" parent="LooseningBolts"]
 position = Vector2(456.5, 370.5)
 scale = Vector2(1.26239, 1.18671)
 texture = ExtResource("4_xkjlt")
 metadata/_edit_lock_ = true
 
-[node name="Inventory" parent="." instance=ExtResource("5_rt2ef")]
+[node name="Inventory" parent="LooseningBolts" instance=ExtResource("5_rt2ef")]
 offset_left = 967.0
 offset_right = 985.0
 offset_bottom = 6.0
 metadata/_edit_lock_ = true
 
-[node name="Bolts" type="Node" parent="."]
+[node name="Bolts" type="Node" parent="LooseningBolts"]
 
-[node name="BoltPic-modified" type="Sprite2D" parent="Bolts"]
+[node name="BoltPic-modified" type="Sprite2D" parent="LooseningBolts/Bolts"]
 position = Vector2(492, 387)
 scale = Vector2(0.0328566, 0.0307204)
 texture = ExtResource("6_0xovo")
 
-[node name="BoltPic-modified2" type="Sprite2D" parent="Bolts"]
+[node name="BoltPic-modified2" type="Sprite2D" parent="LooseningBolts/Bolts"]
 position = Vector2(463, 387)
 scale = Vector2(0.0332043, 0.0311474)
 texture = ExtResource("6_0xovo")
 
-[node name="BoltPic-modified3" type="Sprite2D" parent="Bolts"]
+[node name="BoltPic-modified3" type="Sprite2D" parent="LooseningBolts/Bolts"]
 position = Vector2(464, 409)
 scale = Vector2(0.0332043, 0.0311474)
 texture = ExtResource("6_0xovo")
 
-[node name="BoltPic-modified4" type="Sprite2D" parent="Bolts"]
+[node name="BoltPic-modified4" type="Sprite2D" parent="LooseningBolts/Bolts"]
 position = Vector2(492, 409)
 scale = Vector2(0.0332043, 0.0311474)
 texture = ExtResource("6_0xovo")
 
-[node name="Prompt" type="Label" parent="."]
+[node name="Prompt" type="Label" parent="LooseningBolts"]
 offset_left = 25.0
 offset_top = 552.0
 offset_right = 626.0
@@ -77,32 +80,35 @@ text = "DRAG THE WRENCH OVER THE BOLTS TO LOOSEN THEM"
 autowrap_mode = 2
 metadata/_edit_lock_ = true
 
-[node name="car-jack" parent="." instance=ExtResource("10_oymuq")]
-offset_left = 971.0
-offset_top = 181.0
-offset_right = 1131.0
-offset_bottom = 281.0
-texture = ExtResource("11_fbn55")
-
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="LooseningBolts"]
 wait_time = 2.471
 
-[node name="wrench" parent="." instance=ExtResource("10_oymuq")]
+[node name="unconnected_wrench" type="TextureRect" parent="LooseningBolts"]
+custom_minimum_size = Vector2(100, 100)
 offset_left = 1009.0
 offset_top = 54.0
 offset_right = 1109.0
 offset_bottom = 154.0
+texture = ExtResource("8_ddh5l")
+expand_mode = 1
+script = ExtResource("9_0226e")
 
-[node name="slot_object" parent="." instance=ExtResource("12_3jp8x")]
-offset_left = 431.0
-offset_top = 357.0
-offset_right = 520.0
-offset_bottom = 437.0
+[node name="slot_object" parent="LooseningBolts" instance=ExtResource("12_3jp8x")]
+offset_left = 479.0
+offset_top = 321.0
+offset_right = 568.0
+offset_bottom = 401.0
 
-[node name="back-up-wheel" parent="." instance=ExtResource("12_6qbpt")]
-offset_left = 1002.0
+[node name="carjack2" parent="LooseningBolts" instance=ExtResource("12_nwqcr")]
+offset_left = 976.0
+offset_top = 174.0
+offset_right = 1126.0
+offset_bottom = 274.0
+
+[node name="backup-wheel2" parent="LooseningBolts" instance=ExtResource("12_cromf")]
+offset_left = 1004.0
 offset_top = 295.0
-offset_right = 1102.0
+offset_right = 1104.0
 offset_bottom = 395.0
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="LooseningBolts/Timer" to="LooseningBolts" method="_on_timer_timeout"]
