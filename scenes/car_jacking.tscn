@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dl62g1h2s0xum"]
+[gd_scene load_steps=13 format=3 uid="uid://dl62g1h2s0xum"]
 
 [ext_resource type="Script" path="res://scripts/car_jacking.gd" id="1_vgmlq"]
 [ext_resource type="Texture2D" uid="uid://ca6o7ya8gtac2" path="res://assets/OurAssets/Backgrounds/hi-clearer.png" id="2_6tp6c"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="6_begvn"]
 [ext_resource type="Texture2D" uid="uid://382iqc6bl1y" path="res://assets/OurAssets/tire/Tire-modified.png" id="7_k6h4y"]
 [ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="8_i2ghi"]
+[ext_resource type="Script" path="res://scripts/Tire-modified.gd" id="9_1v2nd"]
 [ext_resource type="PackedScene" uid="uid://b82kj05aojs2c" path="res://scenes/slot_object.tscn" id="10_sfjus"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1yr"]
@@ -59,6 +60,7 @@ metadata/_edit_lock_ = true
 position = Vector2(1068, 339)
 scale = Vector2(0.443038, 0.424198)
 texture = ExtResource("7_k6h4y")
+script = ExtResource("9_1v2nd")
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="."]

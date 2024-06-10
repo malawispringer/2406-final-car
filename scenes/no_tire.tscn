@@ -1,13 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://blpjxvi3joe12"]
+[gd_scene load_steps=9 format=3 uid="uid://blpjxvi3joe12"]
 
+[ext_resource type="Script" path="res://scripts/no_tire.gd" id="1_aela4"]
 [ext_resource type="Texture2D" uid="uid://cy732yusg1qfg" path="res://assets/OurAssets/Backgrounds/hi.jpg" id="1_vdsag"]
 [ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_tvsht"]
 [ext_resource type="Texture2D" uid="uid://382iqc6bl1y" path="res://assets/OurAssets/tire/Tire-modified.png" id="3_fqtmb"]
 [ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="4_vp5rn"]
 [ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="5_1xyq2"]
 [ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="6_p272e"]
+[ext_resource type="PackedScene" uid="uid://b82kj05aojs2c" path="res://scenes/slot_object.tscn" id="8_chi48"]
 
 [node name="NoTire" type="Node2D"]
+script = ExtResource("1_aela4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -17.0
@@ -27,7 +30,6 @@ metadata/_edit_lock_ = true
 position = Vector2(1068, 339)
 scale = Vector2(0.443038, 0.424198)
 texture = ExtResource("3_fqtmb")
-metadata/_edit_lock_ = true
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(0, -24)
@@ -55,3 +57,9 @@ theme_override_font_sizes/font_size = 26
 text = "DRAG THE SPARE TIRE ONTO THE HUB"
 autowrap_mode = 2
 metadata/_edit_lock_ = true
+
+[node name="slot_object" parent="." instance=ExtResource("8_chi48")]
+offset_left = 413.0
+offset_top = 323.0
+offset_right = 544.0
+offset_bottom = 426.0
