@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://h7jipt74pkbg"]
+
+[ext_resource type="Script" path="res://scripts/car_jacking.gd" id="1_vgmlq"]
+[ext_resource type="Texture2D" uid="uid://ca6o7ya8gtac2" path="res://assets/OurAssets/Backgrounds/hi-clearer.png" id="2_6tp6c"]
+[ext_resource type="PackedScene" uid="uid://cd21b3nqwnsg" path="res://scenes/inventory - Copy.tscn" id="2_be1cv"]
+[ext_resource type="Texture2D" uid="uid://cmsyxdg7b6g3" path="res://assets/OurAssets/Car Views/midZoomOnCar-modified.png" id="3_5qlfk"]
+[ext_resource type="Texture2D" uid="uid://m3oqyv752vpx" path="res://assets/OurAssets/FLAT TIRE.png" id="4_5oxnm"]
+[ext_resource type="PackedScene" uid="uid://dh427xt5tki1n" path="res://scenes/wrench.tscn" id="5_ermyd"]
+[ext_resource type="Texture2D" uid="uid://boo6eiiq0u567" path="res://assets/OurAssets/jack1.png" id="6_begvn"]
+[ext_resource type="Texture2D" uid="uid://382iqc6bl1y" path="res://assets/OurAssets/tire/Tire-modified.png" id="7_k6h4y"]
+[ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="8_i2ghi"]
+[ext_resource type="Script" path="res://scripts/Tire-modified.gd" id="9_1v2nd"]
+[ext_resource type="PackedScene" uid="uid://b82kj05aojs2c" path="res://scenes/slot_object.tscn" id="10_sfjus"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1yr"]
+size = Vector2(127, 173)
+
+[node name="CarJacking" type="Node2D"]
+script = ExtResource("1_vgmlq")
+
+[node name="bkgd" type="TextureRect" parent="."]
+offset_left = -17.0
+offset_top = -1157.0
+offset_right = 3650.0
+offset_bottom = 924.0
+texture = ExtResource("2_6tp6c")
+metadata/_edit_lock_ = true
+
+[node name="Inventory" parent="." instance=ExtResource("2_be1cv")]
+offset_left = 967.0
+offset_right = 985.0
+offset_bottom = 6.0
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="car" type="TextureRect" parent="Node2D"]
+offset_left = -5.0
+offset_right = 844.0
+offset_bottom = 556.0
+texture = ExtResource("3_5qlfk")
+metadata/_edit_lock_ = true
+
+[node name="FlatTire" type="Sprite2D" parent="."]
+position = Vector2(456.5, 370.5)
+scale = Vector2(1.26239, 1.18671)
+texture = ExtResource("4_5oxnm")
+metadata/_edit_lock_ = true
+
+[node name="car-jack" parent="." instance=ExtResource("5_ermyd")]
+offset_left = 973.0
+offset_top = 180.0
+offset_right = 1133.0
+offset_bottom = 272.0
+texture = ExtResource("6_begvn")
+metadata/_edit_lock_ = true
+
+[node name="Tire-modified" type="Sprite2D" parent="."]
+position = Vector2(1068, 339)
+scale = Vector2(0.443038, 0.424198)
+texture = ExtResource("7_k6h4y")
+script = ExtResource("9_1v2nd")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(227, 406)
+shape = SubResource("RectangleShape2D_1x1yr")
+
+[node name="Prompt" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 552.0
+offset_right = 626.0
+offset_bottom = 609.0
+theme_override_colors/font_shadow_color = Color(0.18359, 0.18359, 0.18359, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_fonts/font = ExtResource("8_i2ghi")
+theme_override_font_sizes/font_size = 26
+text = "PLACE THE JACK IN FRONT OF THE TIRE"
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="slot_object" parent="." instance=ExtResource("10_sfjus")]
+offset_left = 108.0
+offset_top = 394.0
+offset_right = 238.0
+offset_bottom = 568.0
+
+[connection signal="child_entered_tree" from="Area2D/CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

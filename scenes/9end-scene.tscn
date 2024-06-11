@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dawv330bwbdur"]
+[gd_scene load_steps=5 format=3 uid="uid://dktbs10qu4fx6"]
 
 [ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="1_03bx3"]
 [ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="2_yw317"]
@@ -23,22 +23,22 @@ theme_override_constants/shadow_offset_x = -4
 theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/font = ExtResource("2_yw317")
 theme_override_font_sizes/font_size = 71
-text = "GOOD JOB!"
 horizontal_alignment = 1
 
 [node name="title" type="Label" parent="."]
 offset_left = 59.0
-offset_top = 120.0
+offset_top = 115.0
 offset_right = 1132.0
-offset_bottom = 191.0
+offset_bottom = 186.0
 theme_override_colors/font_color = Color(0, 0.486275, 0.184314, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = -4
 theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/font = ExtResource("2_yw317")
 theme_override_font_sizes/font_size = 71
-text = "Thank you for playing <title>"
+text = "Thanks for playing!"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 offset_left = 426.0

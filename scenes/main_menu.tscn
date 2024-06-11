@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsr1l5b3te7lx"]
+[gd_scene load_steps=6 format=3 uid="uid://cww7nkar885gb"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_4jy8o"]
-[ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="2_b23qf"]
-[ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="3_r2dsk"]
-[ext_resource type="Texture2D" uid="uid://uyq1dy3lw6dn" path="res://assets/OurAssets/Buttons/Red_Buttons_Pixel.png" id="4_x68fo"]
-[ext_resource type="Texture2D" uid="uid://b4nj1p2ff7tlp" path="res://assets/OurAssets/Buttons/better.png" id="5_2w8kh"]
+[ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="1_fe0to"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_hs4w7"]
+[ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="3_yy3es"]
+[ext_resource type="Texture2D" uid="uid://uyq1dy3lw6dn" path="res://assets/OurAssets/Buttons/Red_Buttons_Pixel.png" id="4_y27h1"]
+[ext_resource type="Texture2D" uid="uid://b4nj1p2ff7tlp" path="res://assets/OurAssets/Buttons/better.png" id="5_g8llt"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -14,7 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
-script = ExtResource("1_4jy8o")
+script = ExtResource("1_hs4w7")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -23,13 +23,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_b23qf")
+texture = ExtResource("1_fe0to")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
-offset_left = 118.0
+offset_left = 291.0
 offset_top = 66.0
-offset_right = 1071.0
+offset_right = 894.0
 offset_bottom = 340.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -46,9 +46,9 @@ theme_override_colors/font_color = Color(0, 0.486275, 0.184314, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = -4
 theme_override_constants/shadow_offset_y = 5
-theme_override_fonts/font = ExtResource("3_r2dsk")
+theme_override_fonts/font = ExtResource("3_yy3es")
 theme_override_font_sizes/font_size = 71
-text = "TIRE CHANGE SIMULATOR"
+text = "GAME TITLE"
 horizontal_alignment = 1
 
 [node name="Node" type="Node" parent="VBoxContainer"]
@@ -77,7 +77,7 @@ offset_right = 42.0
 offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_x68fo")
+texture = ExtResource("4_y27h1")
 expand_mode = 1
 
 [node name="QUIT" type="Button" parent="VBoxContainer/VBoxContainer2"]
@@ -99,7 +99,7 @@ offset_right = 41.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_2w8kh")
+texture = ExtResource("5_g8llt")
 expand_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/Start Button" to="." method="_on_start_button_pressed"]

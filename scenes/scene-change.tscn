@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0d6m0jnd1i70"]
+
+[ext_resource type="Texture2D" uid="uid://dkvecr8yu5gcb" path="res://assets/OurAssets/Backgrounds/yaybackground.jpg" id="1_uv2co"]
+[ext_resource type="Script" path="res://scripts/scene-change.gd" id="1_vltkr"]
+[ext_resource type="Script" path="res://scripts/panel-click.gd" id="2_l5vag"]
+[ext_resource type="FontFile" uid="uid://dirpditbds5hh" path="res://assets/OurAssets/MiniCard.ttf" id="3_sfdww"]
+
+[node name="scene-change" type="Node2D"]
+script = ExtResource("1_vltkr")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(578.25, 322.75)
+scale = Vector2(1.29528, 1.21869)
+texture = ExtResource("1_uv2co")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 44.0
+offset_top = 163.0
+offset_right = 1107.0
+offset_bottom = 511.0
+script = ExtResource("2_l5vag")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 147.0
+offset_top = 247.0
+offset_right = 1016.0
+offset_bottom = 306.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_sfdww")
+theme_override_font_sizes/font_size = 58
+text = "OH NO, YOUR TIRE POPPED!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 359.0
+offset_right = 990.0
+offset_bottom = 466.0
+theme_override_constants/outline_size = 1
+theme_override_constants/line_spacing = 17
+theme_override_fonts/font = ExtResource("3_sfdww")
+theme_override_font_sizes/font_size = 28
+text = "LETS WALK THROUGH THE STEPS AND LEARN HOW TO SAFELY AND EFFICIENTLY CHANGE A TIRE"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
